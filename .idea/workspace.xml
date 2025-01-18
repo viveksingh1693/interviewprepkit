@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b13bb67-48f2-4767-83b8-df4a90aabb5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/corejava/src/com/viv/lambda/ComparatorUsingLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corejava/src/com/viv/lambda/StreamDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/corejava/src/com/viv/lambda/StreamDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
