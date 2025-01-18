@@ -35,7 +35,8 @@ public class LamdaApp {
         BinaryOperator<String> concat = (a, b) -> a + b;
         BiFunction<String,String,String> concat2 = (a, b) -> a + b;
         System.out.println(concat.apply("Hello", "World"));
-        
+        System.out.println(concat2.apply("Hello", "World"));
+
         // Implement the Runnable interface using a lambda expression.
         Runnable r = ()->System.out.println("Hello World");
         r.run();
