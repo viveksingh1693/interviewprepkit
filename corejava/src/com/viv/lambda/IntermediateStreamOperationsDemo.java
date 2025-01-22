@@ -63,7 +63,8 @@ public class IntermediateStreamOperationsDemo {
 
         //Create a stream of 10 random numbers and sort them in ascending order.
         IntStream randomNumbers = IntStream.generate(() -> (int) (Math.random() * 100)).limit(10);
-        List<Integer> sortedRandomNumbers = randomNumbers.sorted().boxed().collect(Collectors.toList());
+        List<Integer> sortedRandomNumbers = randomNumbers.sorted().boxed()
+        .collect(Collectors.toList());
         System.out.println("sortedRandomNumbers: " + sortedRandomNumbers);
 
         IntStream.generate(()-> (int)(Math.random() *100))

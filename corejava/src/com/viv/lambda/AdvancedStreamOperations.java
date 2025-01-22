@@ -3,10 +3,8 @@ package com.viv.lambda;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class AdvancedStreamOperations {
 
@@ -62,7 +60,8 @@ public class AdvancedStreamOperations {
                 new Employee("Robert", 40, 4000, "Finance")
         );
 
-        Map<String, List<Employee>> groupEmployeeByDepartment = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+        Map<String, List<Employee>> groupEmployeeByDepartment = employees.stream()
+        .collect(Collectors.groupingBy(Employee::getDepartment));
 
         System.out.println("groupEmployeeByDepartment " + groupEmployeeByDepartment);
 
