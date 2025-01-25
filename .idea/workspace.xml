@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b13bb67-48f2-4767-83b8-df4a90aabb5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/corejava/src/com/viv/lambda/AdvancedStreamOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/corejava/src/com/viv/lambda/TerminalOperationsDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/corejava/src/com/viv/lambda/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/corejava/src/com/viv/lambda/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpattern/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/designpattern/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,29 +22,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2rnDBKhiXD32Rxr1MEHfbu3HknE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AdvancedStreamOperations.executor": "Run",
-    "Application.ComparatorUsingLambda.executor": "Run",
-    "Application.IntermediateStreamOperationsDemo.executor": "Run",
-    "Application.LamdaApp.executor": "Run",
-    "Application.StreamDemo.executor": "Run",
-    "Application.TerminalOperationsDemo.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "V:/learning/interview/interviewprepkit"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AdvancedStreamOperations.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparatorUsingLambda.executor&quot;: &quot;Run&quot;,
+    &quot;Application.IntermediateStreamOperationsDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LamdaApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StreamDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TerminalOperationsDemo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;V:/learning/interview/interviewprepkit&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="StreamDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.viv.lambda.StreamDemo" />

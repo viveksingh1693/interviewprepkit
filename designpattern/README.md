@@ -335,3 +335,162 @@ Use the Command pattern when:
     - The `EmailTask` and `SmsTask` classes encapsulate the actions to be performed.
 
     This demonstrates how the Command pattern can be implemented in a Java application and integrated with the Spring Framework for task scheduling.
+
+    ### Interpreter
+
+    **Interpreter Design Pattern**
+
+    **What**
+
+    **Definition:** The Interpreter pattern is used to define a grammatical representation for a language and provide an interpreter to deal with this grammar.
+
+    **Key Components:**
+    - **AbstractExpression:** Declares an abstract `interpret` method.
+    - **TerminalExpression:** Implements the `interpret` method for terminal symbols in the grammar.
+    - **NonTerminalExpression:** Implements the `interpret` method for non-terminal symbols in the grammar.
+    - **Context:** Contains information that is global to the interpreter.
+    - **Client:** Builds the abstract syntax tree representing a particular sentence in the language defined by the grammar.
+
+    **Why**
+    - **Language Representation:** Useful for designing a language interpreter.
+    - **Grammar Implementation:** Helps in implementing and interpreting a grammar.
+    - **Extensibility:** Easy to extend the grammar by adding new expressions.
+
+    **When**
+
+    Use the Interpreter pattern when:
+    - **Language Parsing:** You need to interpret sentences in a language.  
+        *Example: Parsing and evaluating mathematical expressions.*
+    - **Grammar Representation:** You need to represent a grammar and interpret sentences in that grammar.  
+        *Example: SQL query parsing and execution.*
+    - **Complex Parsing Logic:** You need to simplify complex parsing logic by breaking it into smaller, manageable expressions.  
+        *Example: Interpreting and executing commands in a scripting language.*
+
+    **UML Diagram**
+
+    Below is a UML diagram representing the Interpreter design pattern:
+
+    ```plaintext
+    +-------------------+        +-------------------+        +-------------------+
+    |     Client        |        | AbstractExpression|        | TerminalExpression|
+    |-------------------|        |-------------------|        |-------------------|
+    | - context: Context|        | + interpret()     |        | + interpret()     |
+    | + buildSyntaxTree()|       +-------------------+        +-------------------+
+    | + interpret()     |                ^                             ^
+    +-------------------+                |                             |
+            |                            |                             |
+            v                            |                             |
+    +-------------------+                |                             |
+    | NonTerminalExpression|-------------+                             |
+    |-------------------|                                              |
+    | + interpret()     |----------------------------------------------+
+    +-------------------+
+            |
+            v
+    +-------------------+
+    |     Context       |
+    |-------------------|
+    | - input: String   |
+    | - output: String  |
+    +-------------------+
+    ```
+
+    In this diagram:
+    - The `Client` builds the syntax tree and invokes the `interpret` method.
+    - `AbstractExpression` declares the `interpret` method.
+    - `TerminalExpression` and `NonTerminalExpression` implement the `interpret` method.
+    - `Context` contains information for interpretation.
+
+    **Real-Time Example in Java**
+
+    Let's consider a simple example of interpreting mathematical expressions.
+
+    1. **AbstractExpression Interface:**
+
+        ```java
+        public interface Expression {
+            int interpret();
+        }
+        ```
+
+    2. **TerminalExpression Classes:**
+
+        ```java
+        public class Number implements Expression {
+            private int number;
+
+            public Number(int number) {
+                this.number = number;
+            }
+
+            @Override
+            public int interpret() {
+                return number;
+            }
+        }
+        ```
+
+    3. **NonTerminalExpression Classes:**
+
+        ```java
+        public class Add implements Expression {
+            private Expression leftExpression;
+            private Expression rightExpression;
+
+            public Add(Expression leftExpression, Expression rightExpression) {
+                this.leftExpression = leftExpression;
+                this.rightExpression = rightExpression;
+            }
+
+            @Override
+            public int interpret() {
+                return leftExpression.interpret() + rightExpression.interpret();
+            }
+        }
+
+        public class Subtract implements Expression {
+            private Expression leftExpression;
+            private Expression rightExpression;
+
+            public Subtract(Expression leftExpression, Expression rightExpression) {
+                this.leftExpression = leftExpression;
+                this.rightExpression = rightExpression;
+            }
+
+            @Override
+            public int interpret() {
+                return leftExpression.interpret() - rightExpression.interpret();
+            }
+        }
+        ```
+
+    4. **Client Code:**
+
+        ```java
+        public class InterpreterClient {
+            public static void main(String[] args) {
+                Expression expression = new Add(new Number(10), new Subtract(new Number(20), new Number(5)));
+                int result = expression.interpret();
+                System.out.println("Result: " + result); // Output: Result: 25
+            }
+        }
+        ```
+
+    In this example:
+    - The `Number` class represents terminal expressions.
+    - The `Add` and `Subtract` classes represent non-terminal expressions.
+    - The `InterpreterClient` builds the syntax tree and interprets the expression.
+
+    This demonstrates how the Interpreter pattern can be used to interpret mathematical expressions in Java.
+
+### Example of Interpreter in Java
+
+The `java.util.regex.Pattern` class is an example of the interpreter pattern in the Java class library. A `Pattern` instance is created with an internal abstract syntax tree, representing the grammar rules, during the static method `compile()`. After that, we check a sentence against this grammar using `Matcher`.
+
+```java
+Pattern pattern = Pattern.compile("ADMIN", Pattern.CASE_INSENSITIVE);
+Matcher matcher = pattern.matcher("admin user");
+while (matcher.find()) {
+    System.out.println("has required permission: " + matcher.group());
+}
+```
