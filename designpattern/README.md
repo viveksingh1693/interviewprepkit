@@ -494,3 +494,100 @@ while (matcher.find()) {
     System.out.println("has required permission: " + matcher.group());
 }
 ```
+
+
+### Iterator
+
+**Iterator Design Pattern**
+
+**What**
+
+**Definition:** The Iterator pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+**Key Components:**
+- **Iterator:** An interface for accessing and traversing elements.
+- **ConcreteIterator:** A class that implements the Iterator interface.
+- **Aggregate:** An interface for creating an Iterator object.
+- **ConcreteAggregate:** A class that implements the Aggregate interface and returns an instance of the ConcreteIterator.
+
+**Why**
+- **Encapsulation:** Encapsulates the traversal logic of a collection.
+- **Uniformity:** Provides a uniform way to traverse different collections.
+- **Separation of Concerns:** Separates the traversal logic from the collection's internal structure.
+
+**When**
+
+Use the Iterator pattern when:
+- **Multiple Traversals:** You need to traverse a collection in different ways.  
+    *Example: Traversing a list forward and backward.*
+- **Uniform Traversal:** You want to provide a uniform interface for traversing different collections.  
+    *Example: Iterating over a list, set, or map in a consistent manner.*
+- **Decoupling:** You want to decouple the traversal logic from the collection's internal structure.  
+    *Example: Iterating over a custom data structure without exposing its internal details.*
+
+**UML Diagram**
+
+Below is a UML diagram representing the Iterator design pattern:
+
+```plaintext
++-------------------+        +-------------------+        +-------------------+
+|     Client        |        |     Iterator      |        | ConcreteIterator  |
+|-------------------|        |-------------------|        |-------------------|
+| - aggregate: Aggregate|    | + hasNext()       |        | + hasNext()       |
+| + iterate()       |        | + next()          |        | + next()          |
++-------------------+        +-------------------+        +-------------------+
+        |                           ^                             ^
+        |                           |                             |
+        v                           |                             |
++-------------------+               |                             |
+|    Aggregate      |---------------+                             |
+|-------------------|                                             |
+| + createIterator()|---------------------------------------------+
++-------------------+
+        |
+        v
++-------------------+
+| ConcreteAggregate |
+|-------------------|
+| + createIterator()|
++-------------------+
+```
+
+In this diagram:
+- The `Client` uses the `Iterator` to traverse the `Aggregate`.
+- `Iterator` defines the interface for traversal.
+- `ConcreteIterator` implements the `Iterator` interface.
+- `Aggregate` defines the interface for creating an `Iterator`.
+- `ConcreteAggregate` implements the `Aggregate` interface and returns an instance of `ConcreteIterator`.
+
+**Real-Time Example in Java**
+
+The `java.util.Iterator` interface is an example of the Iterator pattern. Here's a simple example of using an iterator to traverse a list.
+
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class IteratorExample {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        Iterator<String> iterator = names.iterator();
+        while (iterator.hasNext()) {
+            String name = iterator.next();
+            System.out.println(name);
+        }
+    }
+}
+```
+
+In this example:
+- The `ArrayList` class implements the `Iterable` interface, which provides an `iterator` method.
+- The `Iterator` interface provides methods for traversing the list (`hasNext` and `next`).
+- The `IteratorExample` class demonstrates how to use the iterator to traverse the list.
+
+This demonstrates how the Iterator pattern can be used to traverse a collection in Java.
