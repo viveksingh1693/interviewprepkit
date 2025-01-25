@@ -591,3 +591,168 @@ In this example:
 - The `IteratorExample` class demonstrates how to use the iterator to traverse the list.
 
 This demonstrates how the Iterator pattern can be used to traverse a collection in Java.
+
+
+### Strategy
+
+**Strategy Design Pattern**
+
+**What**
+
+**Definition:** The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. This pattern allows the algorithm to vary independently from clients that use it.
+
+**Key Components:**
+- **Strategy:** An interface common to all supported algorithms.
+- **ConcreteStrategy:** Classes that implement the Strategy interface.
+- **Context:** The class that uses a Strategy.
+
+**Why**
+- **Flexibility:** Allows switching between algorithms at runtime.
+- **Encapsulation:** Encapsulates the algorithm implementation details.
+- **Separation of Concerns:** Separates the algorithm from the context in which it is used.
+
+**When**
+
+Use the Strategy pattern when:
+- **Multiple Algorithms:** You need to use different variants of an algorithm.  
+    *Example: Different sorting algorithms (quick sort, merge sort, bubble sort).*
+- **Runtime Decisions:** The algorithm needs to be selected at runtime.  
+    *Example: Payment processing with different payment methods (credit card, PayPal, bank transfer).*
+- **Avoiding Conditional Statements:** You want to avoid complex conditional statements for selecting algorithms.  
+    *Example: Different tax calculation strategies based on country.*
+
+**UML Diagram**
+
+Below is a UML diagram representing the Strategy design pattern:
+
+```plaintext
++-------------------+        +-------------------+        +-------------------+
+|     Context       |        |     Strategy      |        | ConcreteStrategyA |
+|-------------------|        |-------------------|        |-------------------|
+| - strategy: Strategy|      | + execute()       |        | + execute()       |
+| + setStrategy()   |        +-------------------+        +-------------------+
+| + executeStrategy()|               ^                             ^
++-------------------+                |                             |
+        |                            |                             |
+        v                            |                             |
++-------------------+                |                             |
+| ConcreteStrategyB |----------------+                             |
+|-------------------|                                              |
+| + execute()       |----------------------------------------------+
++-------------------+
+```
+
+In this diagram:
+- The `Context` uses a `Strategy` to execute an algorithm.
+- `Strategy` defines the interface for the algorithm.
+- `ConcreteStrategyA` and `ConcreteStrategyB` implement the `Strategy` interface.
+
+**Real-Time Example in Java**
+
+Let's consider a simple example of using the Strategy pattern for different sorting algorithms.
+
+1. **Strategy Interface:**
+
+    ```java
+    public interface SortingStrategy {
+        void sort(int[] array);
+    }
+    ```
+
+2. **ConcreteStrategy Classes:**
+
+    ```java
+    public class BubbleSortStrategy implements SortingStrategy {
+        @Override
+        public void sort(int[] array) {
+            // Bubble sort algorithm
+            for (int i = 0; i < array.length - 1; i++) {
+                for (int j = 0; j < array.length - i - 1; j++) {
+                    if (array[j] > array[j + 1]) {
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+    }
+
+    public class QuickSortStrategy implements SortingStrategy {
+        @Override
+        public void sort(int[] array) {
+            quickSort(array, 0, array.length - 1);
+        }
+
+        private void quickSort(int[] array, int low, int high) {
+            if (low < high) {
+                int pi = partition(array, low, high);
+                quickSort(array, low, pi - 1);
+                quickSort(array, pi + 1, high);
+            }
+        }
+
+        private int partition(int[] array, int low, int high) {
+            int pivot = array[high];
+            int i = (low - 1);
+            for (int j = low; j < high; j++) {
+                if (array[j] < pivot) {
+                    i++;
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+            int temp = array[i + 1];
+            array[i + 1] = array[high];
+            array[high] = temp;
+            return i + 1;
+        }
+    }
+    ```
+
+3. **Context Class:**
+
+    ```java
+    public class SortingContext {
+        private SortingStrategy strategy;
+
+        public void setStrategy(SortingStrategy strategy) {
+            this.strategy = strategy;
+        }
+
+        public void sortArray(int[] array) {
+            strategy.sort(array);
+        }
+    }
+    ```
+
+4. **Client Code:**
+
+    ```java
+    public class StrategyPatternExample {
+        public static void main(String[] args) {
+            int[] array = {5, 2, 9, 1, 5, 6};
+
+            SortingContext context = new SortingContext();
+
+            // Using BubbleSortStrategy
+            context.setStrategy(new BubbleSortStrategy());
+            context.sortArray(array);
+            System.out.println("Bubble Sorted: " + Arrays.toString(array));
+
+            // Using QuickSortStrategy
+            context.setStrategy(new QuickSortStrategy());
+            context.sortArray(array);
+            System.out.println("Quick Sorted: " + Arrays.toString(array));
+        }
+    }
+    ```
+
+In this example:
+- The `SortingStrategy` interface defines the sorting algorithm.
+- The `BubbleSortStrategy` and `QuickSortStrategy` classes implement the `SortingStrategy` interface.
+- The `SortingContext` class uses a `SortingStrategy` to sort an array.
+- The `StrategyPatternExample` class demonstrates how to use different sorting strategies.
+
+This demonstrates how the Strategy pattern can be used to implement different sorting algorithms in Java.
