@@ -3,6 +3,7 @@ package com.viv.behavioraldesignpatterns.interpreter;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+//parses the permission string and builds the expression tree
 public class ExpressonBuilder {
 
     private Stack<PermissionExpression> permissions = new Stack<>();

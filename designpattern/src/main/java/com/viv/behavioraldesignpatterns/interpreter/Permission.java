@@ -1,5 +1,6 @@
 package com.viv.behavioraldesignpatterns.interpreter;
 
+//Terminal Expression
 public class Permission implements PermissionExpression {
 
     private String permission;

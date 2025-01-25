@@ -1,5 +1,6 @@
 package com.viv.behavioraldesignpatterns.interpreter;
 
+//Non Terminal Expression
 public class NotExpression implements PermissionExpression {
 
     private PermissionExpression expression;

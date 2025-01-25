@@ -1,5 +1,6 @@
 package com.viv.behavioraldesignpatterns.interpreter;
 
+//Non-terminal expression
 public class OrExpression implements PermissionExpression {
 
     private PermissionExpression expression1;
