@@ -1,4 +1,69 @@
 # Design Patterns
+## Classification of Design Patterns
+
+Design patterns can be classified into three main categories: Creational, Structural, and Behavioral.
+
+### Creational Design Patterns
+
+Creational design patterns deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by controlling the object creation process.
+
+- **Abstract Factory**
+- **Builder**
+- **Factory Method**
+- **Prototype**
+- **Singleton**
+
+### Structural Design Patterns
+
+Structural design patterns deal with object composition or the way to realize relationships between entities. They help ensure that if one part of a system changes, the entire system doesn't need to change along with it.
+
+- **Adapter**
+- **Bridge**
+- **Composite**
+- **Decorator**
+- **Facade**
+- **Flyweight**
+- **Proxy**
+
+### Behavioral Design Patterns
+
+Behavioral design patterns deal with object collaboration and responsibility delegation. They help in defining how objects interact and communicate with each other.
+
+- **Chain of Responsibility**
+- **Command**
+- **Interpreter**
+- **Iterator**
+- **Mediator**
+- **Memento**
+- **Observer**
+- **State**
+- **Strategy**
+- **Template Method**
+- **Visitor**
+
+### Diagram
+
+Below is a diagram representing the classification of design patterns:
+
+```plaintext
++-------------------+        +-------------------+        +-------------------+
+|   Creational      |        |   Structural      |        |   Behavioral      |
+|-------------------|        |-------------------|        |-------------------|
+| - Abstract Factory|        | - Adapter         |        | - Chain of Resp.  |
+| - Builder         |        | - Bridge          |        | - Command         |
+| - Factory Method  |        | - Composite       |        | - Interpreter     |
+| - Prototype       |        | - Decorator       |        | - Iterator        |
+| - Singleton       |        | - Facade          |        | - Mediator        |
+|                   |        | - Flyweight       |        | - Memento         |
+|                   |        | - Proxy           |        | - Observer        |
+|                   |        |                   |        | - State           |
+|                   |        |                   |        | - Strategy        |
+|                   |        |                   |        | - Template Method |
+|                   |        |                   |        | - Visitor         |
++-------------------+        +-------------------+        +-------------------+
+```
+
+
 
 ## Behavioral Design Patterns
 
