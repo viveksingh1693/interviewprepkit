@@ -12,6 +12,7 @@ public class Client {
         LazyRegistryWithDcl instance4 = LazyRegistryWithDcl.getInstance();
         System.out.println(instance3 == instance4);
 
+        @SuppressWarnings("unused")
         LazyRegistryWithIODH singleWithIODH ;
         singleWithIODH = LazyRegistryWithIODH.getInstance();
         singleWithIODH = LazyRegistryWithIODH.getInstance();
