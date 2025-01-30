@@ -1,21 +1,32 @@
-package com.viv.structuraldesignpattern.facade;
+public class Email {
+    private Template template;
+    private Stationary stationary;
+    private Object order;
 
-public class Email implements Template {
-    
-
-    @Override
-    public String format(Object obj) {
-        return "EMAIL";
-    }
+    // Add a private constructor to enforce the use of the builder
+    private Email() {}
 
     public static EmailBuilder getBuilder() {
         return new EmailBuilder();
     }
 
+    // Getters for the fields
+    public Template getTemplate() {
+        return template;
+    }
+
+    public Stationary getStationary() {
+        return stationary;
+    }
+
+    public Object getOrder() {
+        return order;
+    }
+
     public static class EmailBuilder {
         private Template template;
         private Stationary stationary;
-        private Object obj;
+        private Object order;
 
         public EmailBuilder withTemplate(Template template) {
             this.template = template;
@@ -27,19 +38,16 @@ public class Email implements Template {
             return this;
         }
 
-        public EmailBuilder forObject(Object obj) {
-            this.obj = obj;
+        public EmailBuilder forObject(Object order) {
+            this.order = order;
             return this;
         }
 
         public Email build() {
             Email email = new Email();
-            // Set the properties of email using the builder
-            // For example:
-            // email.setTemplate(this.template);
-            // email.setStationary(this.stationary);
-            // email.setObject(this.obj);
-            
+            email.template = this.template;
+            email.stationary = this.stationary;
+            email.order = this.order;
             return email;
         }
     }
