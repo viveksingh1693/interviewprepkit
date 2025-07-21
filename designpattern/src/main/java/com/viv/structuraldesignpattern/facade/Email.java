@@ -4,7 +4,7 @@ public class Email {
     private Object order;
 
     // Add a private constructor to enforce the use of the builder
-    private Email() {}
+    public Email() {}
 
     public static EmailBuilder getBuilder() {
         return new EmailBuilder();
