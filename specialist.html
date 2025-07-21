@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Specialist Interview Preparation Calendar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            border-radius: 15px;
+            color: white;
+        }
+        .profile-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4CAF50;
+        }
+        .week-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .week {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+        .week:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .week-header {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: -20px -20px 15px -20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .day {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border-left: 4px solid #FF9800;
+        }
+        .day-header {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .topic {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        .resources {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .certification-section {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .resource-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .resource-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        .export-btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .export-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        .tips {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Software Engineer Specialist Interview Preparation</h1>
+            <p>12-Week Comprehensive Plan for Top Tech Companies</p>
+        </div>
+
+		<!--
+        <div class="profile-summary">
+            <h3>📋 Profile Analysis - Vivek Singh</h3>
+            <p><strong>Current Experience:</strong> 5+ years at Amdocs (Java, Spring Boot, Microservices, K8s)</p>
+            <p><strong>Strengths:</strong> Enterprise systems, Microservices architecture, Cloud (Azure AZ-204, AWS CLF-C01)</p>
+            <p><strong>Target Companies:</strong> Google, Amazon, Microsoft, Netflix, Uber, Airbnb</p>
+            <p><strong>Focus Areas:</strong> System Design, Advanced Java, Data Structures & Algorithms, Leadership</p>
+        </div>
+		-->
+
+        <div class="certification-section">
+            <h3>🏆 Recommended Certifications</h3>
+            <div class="resource-links">
+                <div class="resource-card">
+                    <h4>Oracle Certified Java SE 17 Developer</h4>
+                    <p>Essential for Java expertise validation</p>
+                    <p><strong>Timeline:</strong> Weeks 8-10</p>
+                </div>
+                <div class="resource-card">
+                    <h4>AWS Solutions Architect Associate</h4>
+                    <p>Cloud architecture for system design</p>
+                    <p><strong>Timeline:</strong> Weeks 6-8</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Certified Kubernetes Administrator (CKA)</h4>
+                    <p>Validates your K8s experience</p>
+                    <p><strong>Timeline:</strong> Weeks 4-6</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="week-container">
+            <div class="week">
+                <div class="week-header">Week 1-2: Foundation & Assessment</div>
+                <div class="day">
+                    <div class="day-header">Monday - Data Structures Basics</div>
+                    <div class="topic">• Arrays, LinkedLists, Stacks, Queues</div>
+                    <div class="topic">• Time/Space Complexity Analysis</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Algorithms Fundamentals</div>
+                    <div class="topic">• Sorting & Searching Algorithms</div>
+                    <div class="topic">• Two Pointers, Sliding Window</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - Java Core Concepts</div>
+                    <div class="topic">• OOP Principles, Collections Framework</div>
+                    <div class="topic">• Concurrency, Memory Management</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - Spring Framework Deep Dive</div>
+                    <div class="topic">• IoC, DI, AOP, Spring Boot internals</div>
+                    <div class="topic">• Spring Security, Testing</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - Practice & Review</div>
+                    <div class="topic">• LeetCode Easy problems (5-7)</div>
+                    <div class="topic">• System Design basics</div>
+                </div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">Week 3-4: Intermediate Problem Solving</div>
+                <div class="day">
+                    <div class="day-header">Monday - Trees & Graphs</div>
+                    <div class="topic">• Binary Trees, BST, Graph Traversals</div>
+                    <div class="topic">• DFS, BFS implementations</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Dynamic Programming</div>
+                    <div class="topic">• DP patterns, Memoization</div>
+                    <div class="topic">• Common DP problems</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - Database & SQL</div>
+                    <div class="topic">• Advanced SQL queries, Indexing</div>
+                    <div class="topic">• Database design principles</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - Microservices Architecture</div>
+                    <div class="topic">• Design patterns, API Gateway</div>
+                    <div class="topic">• Service discovery, Circuit breakers</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - Practice Session</div>
+                    <div class="topic">• LeetCode Medium problems (3-5)</div>
+                    <div class="topic">• Mock interviews</div>
+                </div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">Week 5-6: System Design & Architecture</div>
+                <div class="day">
+                    <div class="day-header">Monday - System Design Fundamentals</div>
+                    <div class="topic">• Scalability, Load Balancing</div>
+                    <div class="topic">• CAP Theorem, Consistency patterns</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Distributed Systems</div>
+                    <div class="topic">• Microservices vs Monolith</div>
+                    <div class="topic">• Event-driven architecture</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - Cloud & DevOps</div>
+                    <div class="topic">• AWS services, Kubernetes deep dive</div>
+                    <div class="topic">• CI/CD pipelines, Docker</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - System Design Practice</div>
+                    <div class="topic">• Design URL shortener, Chat system</div>
+                    <div class="topic">• Design News Feed, E-commerce</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - CKA Certification Prep</div>
+                    <div class="topic">• Kubernetes cluster management</div>
+                    <div class="topic">• Practice exams</div>
+                </div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">Week 7-8: Advanced Topics & AWS</div>
+                <div class="day">
+                    <div class="day-header">Monday - Advanced Java</div>
+                    <div class="topic">• JVM internals, Garbage Collection</div>
+                    <div class="topic">• Performance tuning, Profiling</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Advanced Algorithms</div>
+                    <div class="topic">• Graph algorithms, Shortest paths</div>
+                    <div class="topic">• Advanced DP, Greedy algorithms</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - AWS Solutions Architect</div>
+                    <div class="topic">• EC2, S3, RDS, Lambda</div>
+                    <div class="topic">• VPC, Security, Monitoring</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - Message Queues & Events</div>
+                    <div class="topic">• Kafka, RabbitMQ, Event sourcing</div>
+                    <div class="topic">• CQRS pattern</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - AWS Certification Exam</div>
+                    <div class="topic">• Practice tests and review</div>
+                    <div class="topic">• Take AWS SAA exam</div>
+                </div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">Week 9-10: Java Certification & Hard Problems</div>
+                <div class="day">
+                    <div class="day-header">Monday - Java SE 17 Features</div>
+                    <div class="topic">• Records, Sealed classes, Pattern matching</div>
+                    <div class="topic">• Modules, New APIs</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Hard Algorithm Problems</div>
+                    <div class="topic">• LeetCode Hard problems (2-3)</div>
+                    <div class="topic">• Complex system design scenarios</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - Security & Best Practices</div>
+                    <div class="topic">• OAuth, JWT, Spring Security</div>
+                    <div class="topic">• OWASP Top 10, Secure coding</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - Oracle Java Certification</div>
+                    <div class="topic">• Practice exams, Mock tests</div>
+                    <div class="topic">• Take Oracle Java SE 17 exam</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - Behavioral Interview Prep</div>
+                    <div class="topic">• STAR method, Leadership examples</div>
+                    <div class="topic">• Project deep dives</div>
+                </div>
+            </div>
+
+            <div class="week">
+                <div class="week-header">Week 11-12: Final Preparation & Interviews</div>
+                <div class="day">
+                    <div class="day-header">Monday - Company-Specific Prep</div>
+                    <div class="topic">• Google: System design, Algorithms</div>
+                    <div class="topic">• Amazon: Leadership principles, Scalability</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Tuesday - Mock Interview Sessions</div>
+                    <div class="topic">• Peer interviews, Pramp sessions</div>
+                    <div class="topic">• Record and review sessions</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Wednesday - System Design Deep Dive</div>
+                    <div class="topic">• Complex systems: Uber, Netflix</div>
+                    <div class="topic">• Trade-offs and scaling decisions</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Thursday - Final Review</div>
+                    <div class="topic">• Review weak areas</div>
+                    <div class="topic">• Practice most frequent problems</div>
+                </div>
+                <div class="day">
+                    <div class="day-header">Friday - Interview Ready</div>
+                    <div class="topic">• Apply to target companies</div>
+                    <div class="topic">• Schedule interviews</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resources">
+            <h3>📚 Essential Resources & Links</h3>
+            <div class="resource-links">
+                <div class="resource-card">
+                    <h4>Algorithm Practice</h4>
+                    <p>• <a href="https://leetcode.com" target="_blank">LeetCode</a> - Primary platform</p>
+                    <p>• <a href="https://hackerrank.com" target="_blank">HackerRank</a> - Java-specific</p>
+                    <p>• <a href="https://pramp.com" target="_blank">Pramp</a> - Mock interviews</p>
+                </div>
+                <div class="resource-card">
+                    <h4>System Design</h4>
+                    <p>• <a href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design Primer</a></p>
+                    <p>• <a href="https://highscalability.com" target="_blank">High Scalability</a></p>
+                    <p>• <a href="https://www.educative.io/courses/grokking-the-system-design-interview" target="_blank">Grokking System Design</a></p>
+                </div>
+                <div class="resource-card">
+                    <h4>Java & Spring</h4>
+                    <p>• <a href="https://docs.oracle.com/en/java/javase/17/" target="_blank">Java 17 Documentation</a></p>
+                    <p>• <a href="https://spring.io/guides" target="_blank">Spring Guides</a></p>
+                    <p>• <a href="https://www.baeldung.com" target="_blank">Baeldung</a> - Java tutorials</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Cloud & DevOps</h4>
+                    <p>• <a href="https://aws.amazon.com/training/" target="_blank">AWS Training</a></p>
+                    <p>• <a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes Documentation</a></p>
+                    <p>• <a href="https://www.cncf.io/certification/cka/" target="_blank">CKA Certification</a></p>
+                </div>
+                <div class="resource-card">
+                    <h4>Books</h4>
+                    <p>• "Cracking the Coding Interview" - Gayle McDowell</p>
+                    <p>• "Designing Data-Intensive Applications" - Martin Kleppmann</p>
+                    <p>• "Effective Java" - Joshua Bloch</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Company Preparation</h4>
+                    <p>• <a href="https://github.com/jwasham/coding-interview-university" target="_blank">Coding Interview University</a></p>
+                    <p>• <a href="https://www.teamblind.com" target="_blank">Blind</a> - Company insights</p>
+                    <p>• <a href="https://www.levels.fyi" target="_blank">Levels.fyi</a> - Salary data</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips">
+            <h3>💡 Pro Tips for Success</h3>
+            <p><strong>Daily Routine:</strong> 2-3 hours coding practice, 1 hour system design, 30 minutes reading</p>
+            <p><strong>Weekly Goals:</strong> 15-20 LeetCode problems, 2-3 system design problems, 1 mock interview</p>
+            <p><strong>Focus Areas:</strong> Your microservices experience is valuable - prepare to discuss scalability challenges</p>
+            <p><strong>Behavioral Questions:</strong> Prepare STAR format answers for your AT&T and Telstra projects</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="export-btn" onclick="generateGoogleCalendar()">📅 Generate Google Calendar</button>
+            <button class="export-btn" onclick="exportToCSV()">📊 Export to CSV</button>
+            <button class="export-btn" onclick="printSchedule()">🖨️ Print Schedule</button>
+        </div>
+    </div>
+
+    <script>
+        function generateGoogleCalendar() {
+            const events = [
+                // Week 1-2
+                {title: "Data Structures Basics", start: "2025-05-26T09:00:00", end: "2025-05-26T12:00:00", description: "Arrays, LinkedLists, Stacks, Queues, Time/Space Complexity"},
+                {title: "Algorithms Fundamentals", start: "2025-05-27T09:00:00", end: "2025-05-27T12:00:00", description: "Sorting & Searching, Two Pointers, Sliding Window"},
+                {title: "Java Core Concepts", start: "2025-05-28T09:00:00", end: "2025-05-28T12:00:00", description: "OOP, Collections, Concurrency, Memory Management"},
+                {title: "Spring Framework Deep Dive", start: "2025-05-29T09:00:00", end: "2025-05-29T12:00:00", description: "IoC, DI, AOP, Spring Boot internals, Security"},
+                {title: "Practice & Review", start: "2025-05-30T09:00:00", end: "2025-05-30T12:00:00", description: "LeetCode Easy problems, System Design basics"},
+                
+                // Week 3-4 (continuing pattern)
+                {title: "Trees & Graphs", start: "2025-06-02T09:00:00", end: "2025-06-02T12:00:00", description: "Binary Trees, BST, Graph Traversals, DFS, BFS"},
+                {title: "Dynamic Programming", start: "2025-06-03T09:00:00", end: "2025-06-03T12:00:00", description: "DP patterns, Memoization, Common problems"},
+                {title: "Database & SQL", start: "2025-06-04T09:00:00", end: "2025-06-04T12:00:00", description: "Advanced SQL, Indexing, Database design"},
+                {title: "Microservices Architecture", start: "2025-06-05T09:00:00", end: "2025-06-05T12:00:00", description: "Design patterns, API Gateway, Service discovery"},
+                {title: "Practice Session", start: "2025-06-06T09:00:00", end: "2025-06-06T12:00:00", description: "LeetCode Medium problems, Mock interviews"},
+                
+                // Adding key milestones
+                {title: "CKA Certification Exam", start: "2025-06-27T09:00:00", end: "2025-06-27T12:00:00", description: "Take Certified Kubernetes Administrator exam"},
+                {title: "AWS SAA Certification Exam", start: "2025-07-11T09:00:00", end: "2025-07-11T12:00:00", description: "Take AWS Solutions Architect Associate exam"},
+                {title: "Oracle Java SE 17 Certification", start: "2025-07-24T09:00:00", end: "2025-07-24T12:00:00", description: "Take Oracle Java SE 17 Developer exam"},
+                {title: "Final Interview Preparation", start: "2025-08-07T09:00:00", end: "2025-08-07T12:00:00", description: "Apply to target companies, Schedule interviews"}
+            ];
+
+            let calendarData = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Interview Prep//EN\n";
+            
+            events.forEach(event => {
+                const startDate = new Date(event.start).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                const endDate = new Date(event.end).toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+                
+                calendarData += `BEGIN:VEVENT\n`;
+                calendarData += `SUMMARY:${event.title}\n`;
+                calendarData += `DTSTART:${startDate}\n`;
+                calendarData += `DTEND:${endDate}\n`;
+                calendarData += `DESCRIPTION:${event.description}\n`;
+                calendarData += `END:VEVENT\n`;
+            });
+            
+            calendarData += "END:VCALENDAR";
+            
+            const blob = new Blob([calendarData], { type: 'text/calendar' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'interview_preparation_schedule.ics';
+            link.click();
+            window.URL.revokeObjectURL(url);
+            
+            alert('Google Calendar file downloaded! Import this .ics file into Google Calendar.');
+        }
+
+        function exportToCSV() {
+            const csvContent = `Date,Topic,Description,Duration
+2025-05-26,Data Structures Basics,"Arrays, LinkedLists, Stacks, Queues",3 hours
+2025-05-27,Algorithms Fundamentals,"Sorting & Searching, Two Pointers",3 hours
+2025-05-28,Java Core Concepts,"OOP, Collections, Concurrency",3 hours
+2025-05-29,Spring Framework Deep Dive,"IoC, DI, AOP, Spring Boot",3 hours
+2025-05-30,Practice & Review,"LeetCode Easy problems",3 hours
+2025-06-02,Trees & Graphs,"Binary Trees, BST, Graph Traversals",3 hours
+2025-06-03,Dynamic Programming,"DP patterns, Memoization",3 hours
+2025-06-04,Database & SQL,"Advanced SQL, Indexing",3 hours
+2025-06-05,Microservices Architecture,"Design patterns, API Gateway",3 hours
+2025-06-06,Practice Session,"LeetCode Medium problems",3 hours`;
+
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'interview_prep_schedule.csv';
+            link.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function printSchedule() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
