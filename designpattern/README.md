@@ -1,4 +1,45 @@
 # Design Patterns
+
+## SOLID Design Principles
+
+SOLID is a set of five principles that help developers design maintainable, scalable, and robust object-oriented systems.
+
+### Principles
+
+1. **Single Responsibility Principle (SRP)**
+    - *Definition*: A class should have only one reason to change, meaning it should have only one job or responsibility.
+    - *Application*: Split classes that handle multiple concerns (e.g., data access and business logic) into separate classes.
+
+2. **Open/Closed Principle (OCP)**
+    - *Definition*: Software entities should be open for extension but closed for modification.
+    - *Application*: Use interfaces or abstract classes so new functionality can be added by extending existing code rather than modifying it.
+
+3. **Liskov Substitution Principle (LSP)**
+    - *Definition*: Subtypes must be substitutable for their base types without altering the correctness of the program.
+    - *Application*: Ensure derived classes extend base classes without changing expected behavior.
+
+4. **Interface Segregation Principle (ISP)**
+    - *Definition*: Clients should not be forced to depend on interfaces they do not use.
+    - *Application*: Split large interfaces into smaller, more specific ones so classes only implement what they need.
+
+5. **Dependency Inversion Principle (DIP)**
+    - *Definition*: High-level modules should not depend on low-level modules; both should depend on abstractions.
+    - *Application*: Use dependency injection and program to interfaces, not concrete implementations.
+
+### Application Example
+
+Consider a payment processing system:
+
+- **SRP**: Separate classes for payment validation, processing, and notification.
+- **OCP**: Add new payment methods by extending a base `PaymentProcessor` class.
+- **LSP**: All payment processors (e.g., `CreditCardProcessor`, `PaypalProcessor`) can be used interchangeably.
+- **ISP**: Different interfaces for payment, refund, and reporting so processors only implement relevant methods.
+- **DIP**: The main payment service depends on an `IPaymentProcessor` interface, not concrete classes.
+
+**Interview Question:**  
+Q: What are SOLID principles and why are they important?  
+A: SOLID principles guide the design of software that is easy to maintain, extend, and test by promoting separation of concerns, flexibility, and robustness.
+
 ## Classification of Design Patterns
 
 Design patterns can be classified into three main categories: Creational, Structural, and Behavioral.
